@@ -1,0 +1,35 @@
+<html>
+<head>
+    <script src="index.js"></script>
+</head>
+<body id="Color1">
+    <div id="Color2">
+        <center>
+        <h2 id="Intro">Countries Around The World!</h2>
+        <h2 id="CountryName"></h2>
+        <img src="https://www.mapsofworld.com/images/world-political-maps.jpg" id="Flag" style="width:300px;height:200px;" border="10px solid #555;">
+        <div id="Color3">
+            <h2 id="OfficialLanguage"></h2>
+            <h2 id="Greeting"></h2>
+            <h2 id="Selection">Please select a country:</h2>
+            <select id="CountryList">
+                <option value="US">United States</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Uganda">Uganda</option>
+                <option value="France">France</option>
+                <option value="Germany">Germany</option>
+            </select>
+            <button onclick="SwitchCountry(getUserChoice())">Swap Country</button>
+        </div>
+    </center>
+    </div>
+    <script>
+        function getUserChoice() {
+            let getList = document.getElementById('CountryList');
+            let selectIndex = getList.selectedIndex;
+            let countryName = getList.options[selectIndex].innerText;
+            return countryName;
+        }
+    </script>
+</body>
+</html>
